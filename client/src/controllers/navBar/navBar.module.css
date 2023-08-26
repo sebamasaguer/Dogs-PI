@@ -1,0 +1,35 @@
+.navbar{
+    background-color: #1a1a1a;
+    flex-direction: row;
+width: 100%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+}   
+.titlehome1 {
+    display: flex;
+   align-items: left;
+    color: #fff;
+    text-shadow: #eed1caf8;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: rgb(74, 78, 78);
+
+    border-radius: 30px;
+    padding: 1px;
+    border: 1px solid #fff;
+}
+.search{
+
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+.aboutNavButton{
+  display: flex;
+  justify-content: left;
+    margin-right: 20px;
+    color: #fff;
+    border-color: aqua;
+}

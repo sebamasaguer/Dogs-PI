@@ -1,0 +1,28 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+  background-image: url('../../images/dogs.jpg');
+  background-size: cover;
+}
+.nav{
+    background-color: #1a1a1a;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    padding: 0 5px;
+ 
+}
+.dogs{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    border-radius: 10px;
+    top: 15%;
+}
+.sideBar{
+width: 20%;
+    border-radius: 10px;
+}
