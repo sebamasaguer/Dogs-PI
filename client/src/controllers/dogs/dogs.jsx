@@ -37,6 +37,9 @@ export default function DogArea() {
             temperaments={el.temperaments}
             height_min={el.height_min}
             height_max={el.height_max}
+            weight_min={el.weight_min}
+            weight_max={el.weight_max}
+            origin={el.origin}
           />
         )})
         }

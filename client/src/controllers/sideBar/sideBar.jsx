@@ -7,8 +7,6 @@ import {
   orderByName,
   getBreeds,
   getDogsByBreed,
-  filterDogsByMAXWeight,
-  filterDogsByMINWeight,
   orderByWeight
 } from "../../redux/actions/actions";
 import styled from "./sideBar.module.css";
@@ -23,21 +21,6 @@ export default function SideBar() {
   );
   const allDogs = useSelector((state) => state.allDogs);
   const breeds = useSelector((state) => state.breeds);
-  
-  const minWeights = allDogs
-    .map((el) => el.weight_min)
-    .sort(function (a, b) {
-      return a - b;
-    });
-  const allDogsMinWeights = [...new Set(minWeights)];
-  
-  const maxWeights = allDogs
-    .map((el) => el.weight_max)
-    .sort(function (a, b) {
-      return a - b;
-    });
-  const allDogsMaxWeights = [...new Set(maxWeights)];
-
   useEffect(() => {
     dispatch(getDogs());
     dispatch(getTemperamentsList());
@@ -64,14 +47,6 @@ export default function SideBar() {
   function handleFilteredByBreed(e) {
     e.preventDefault();
     dispatch(getDogsByBreed(e.target.value));
-  }
-  function handleFilteredMAXWeight(e) {
-    e.preventDefault();
-    dispatch(filterDogsByMAXWeight(e.target.value));
-  }
-  function handleFilteredMINWeight(e) {
-    e.preventDefault();
-    dispatch(filterDogsByMINWeight(e.target.value));
   }
   return (
  
@@ -144,39 +119,7 @@ export default function SideBar() {
             })}
           </select>
         </div>
-        <div className={styled.filterSection}>
-          <h5 className={styled.filterHeader}>Filter by max weight</h5>
-          <select onChange={(e) => handleFilteredMAXWeight(e)}>
-            <option value="all">All Weights</option>
-            {allDogsMaxWeights.map((maxWeight) => {
-              return maxWeight ? (
-                <option value={maxWeight} key={maxWeight}>
-                  {maxWeight} kg
-                </option>
-              ) : (
-                ""
-              );
-            })}
-          </select>
-        </div>
-        <div className={styled.filterSection}>
-          <h5 className={styled.filterHeader}>Filter by min weight</h5>
-          <select onChange={(e) => handleFilteredMINWeight(e)}>
-            <option value="all">All Weights</option>
-            {allDogsMinWeights.map((minWeight) => {
-              return minWeight ? (
-                <option value={minWeight} key={minWeight}>
-                  {minWeight} kg
-                </option>
-              ) : (
-                ""
-              );
-            })}
-          </select>
-        </div>
-        <div className={styled.filterSection}>
-          
-        </div>
+  
       </div>
 
   );

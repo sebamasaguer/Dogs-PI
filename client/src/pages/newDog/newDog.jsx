@@ -135,7 +135,7 @@ export default function DogCreation() {
   return (
       <div className={styles.mainContainerCreation}>
         <div>
-          <h2>Create Dogui</h2>
+          <h2 className={styles.titleDogui}>Create Dogui</h2>
         </div>
         <div className={styles.formContainer}>
           <form onSubmit={(e) => handleSubmit(e)}>
@@ -161,9 +161,7 @@ export default function DogCreation() {
                 placeholder="url"
                 onChange={(e) => handleChange(e)}
               />
-              <div>
-                <p className={styles.error}>{errors.image}</p>
-              </div>
+              
             </div>
             <div className={styles.Section}>
               <h4>Heights</h4>
@@ -255,7 +253,7 @@ export default function DogCreation() {
                 <button className={styles.buttonCancel}>Cancel</button>
               </Link>
               <button className={styles.button} type="submit">
-                Create 🐕
+                Create
               </button>
             </div>
           </form>
