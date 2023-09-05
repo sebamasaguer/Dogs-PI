@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { postDog, getTemperamentsList } from "../../redux/actions/actions";
 import styles from "./newDog.module.css";
+import validate from "./validate";
 
-function validateForm(input) {
+/*function validateForm(input) {
   let errors = {};
 
   // NAME
@@ -13,6 +14,9 @@ function validateForm(input) {
   } else {
     errors.name = "";
   }
+  if(input.name.lenght < 2 || input.name.lenght > 20){
+    errors.name = 'The name must be between 2 and 20 characters'
+} 
 
   // WEIGHTS
   if (!input.weight_min) {
@@ -49,7 +53,7 @@ function validateForm(input) {
     errors.height_max = "";
   }
   return errors;
-}
+}*/
 
 export default function DogCreation() {
   const dispatch = useDispatch();
@@ -79,7 +83,7 @@ export default function DogCreation() {
       [e.target.name]: e.target.value,
     });
     setErrors(
-      validateForm({
+      validate({
         ...input,
         [e.target.name]: e.target.value,
       })
@@ -146,7 +150,7 @@ export default function DogCreation() {
                 value={input.name}
                 name="name"
                 onChange={(e) => handleChange(e)}
-                required
+                
               />
               <div>
                 <p className={styles.error}>{errors.name}</p>
@@ -164,18 +168,18 @@ export default function DogCreation() {
               
             </div>
             <div className={styles.Section}>
-              <h4>Heights</h4>
+               Heights
               <label>Min</label>
               <input
                 type="number"
                 value={input.height_min}
                 name="height_min"
                 placeholder="20"
-                onChange={(e) => handleChange(e)}
-                required
+                onChange={(e) => handleChange(e)}           
               />
               <div>
                 <p className={styles.error}>{errors.height_min}</p>
+                
               </div>
               <label>Max</label>
               <input
@@ -184,14 +188,14 @@ export default function DogCreation() {
                 name="height_max"
                 placeholder="50"
                 onChange={(e) => handleChange(e)}
-                required
               />
               <div>
                 <p className={styles.error}>{errors.height_max}</p>
+               <p className={styles.error}>{ errors.especial1}</p>
               </div>
             </div>
             <div className={styles.Section}>
-              <h4>Weights</h4>
+              Weights
               <label>Min</label>
               <input
                 type="number"
@@ -199,7 +203,6 @@ export default function DogCreation() {
                 name="weight_min"
                 placeholder="15"
                 onChange={(e) => handleChange(e)}
-                required
               />
               <div>
                 <p className={styles.error}>{errors.weight_min}</p>
@@ -211,10 +214,10 @@ export default function DogCreation() {
                 name="weight_max"
                 placeholder="32"
                 onChange={(e) => handleChange(e)}
-                required
               />
               <div>
                 <p className={styles.error}>{errors.weight_max}</p>
+                <p className={styles.error}>{ errors.especial2}</p>
               </div>
             </div>
             <div className={styles.Section}>
@@ -223,9 +226,13 @@ export default function DogCreation() {
                 type="text"
                 value={input.life_span}
                 name="life_span"
-                placeholder="12 - 15 years"
+                placeholder="Years"
                 onChange={(e) => handleChange(e)}
               />
+              <div>
+              <p className={styles.error}>{errors.life_span}</p>
+               </div>
+
             </div>
             <div className={styles.Section}>
               <label>Temperaments</label>

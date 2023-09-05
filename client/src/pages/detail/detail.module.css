@@ -1,20 +1,24 @@
 .bodyDetail {
-    width: 75%;
+    width: 100%;
     height: 95%;
     font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 10%;
 
+background-image: url('../../images/1e9a242d46e894694cd3a7d8f7b1066a.jpeg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+box-shadow: 6px 7px 8px -6px rgba(182, 185, 182, 0.911);
   }
   
   .mainCont {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(34, 128, 123, 0.322);
+    background-color: rgba(34, 128, 123, 0.644);
     box-shadow: 6px 7px 8px -6px rgba(65, 143, 13, 0.7);
     border-radius: 15px;
     color: white;
@@ -39,7 +43,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(27, 30, 194, 0.192);
+    background-color: rgba(27, 30, 194, 0.534);
     padding: 8px;
     border-radius: 15px;
     max-width: 80%;

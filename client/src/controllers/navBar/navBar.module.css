@@ -1,24 +1,47 @@
 .navbar{
-    background-color: #1a1a1a;
+    background-color: #646060;
     flex-direction: row;
 width: 100%;
+height: 5em;
     display: flex;
-    
-    align-items: center;
+    background-image: url('../../images/depositphotos_85929920-stock-photo-black-and-white-doggy-tile.jpg') ;
+background-size: cover;
+    background-repeat:repeat;
+    background-position: center;
     justify-content: space-between;
+
+    
 }   
 .titlehome1 {
     display: flex;
    align-items: left;
+    justify-content: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+margin-top: 20px;
     color: #fff;
     text-shadow: #eed1caf8;
     font-size: 20px;
     text-decoration: none;
     background-color: rgb(74, 78, 78);
-
     border-radius: 30px;
-    padding: 1px;
     border: 1px solid #fff;
+    box-shadow: 2px 3px 2px 1px rgba(30, 119, 122, 0.562);
+}
+.titlehome1 h1{
+
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: #eed1caf8;
+    text-decoration: none;
+}
+.titlehome1:hover{
+   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+    color: #000;
+    text-decoration: none;
 }
 .search{
 

@@ -5,6 +5,7 @@ export default function LandingPage(){
     return(
 
             <div className={styled.Intro}>
+                
                 <h1 className={styled.Title}>Welcome to Doguis!</h1>
                 <Link to='/home'className={styled.Buton}>Home</Link>
             </div>

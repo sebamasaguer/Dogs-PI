@@ -1,23 +1,49 @@
-import styles from './pagination.module.css'
+import styled from './pagination.module.css'
 
 export default function Pagination({dogsPerPage, allDogs, pagination, currentPage}) {
-    const pageNumbers = []
+    const pageNumber = [];
+  for (let i = 1; i <= Math.ceil(allDogs / dogsPerPage); i++) {
+    pageNumber.push(i);
+  }
 
-    for (let i = 1; i <= Math.ceil(allDogs/dogsPerPage); i++) {
-        pageNumbers.push(i)
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      pagination(currentPage - 1);
     }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < pageNumber.length) {
+      pagination(currentPage + 1);
+    }
+  };
     return(
         <nav>
-            <ul className={styles.crumbs}>
-                {
-                    pageNumbers&&
-                    pageNumbers.map(number => (
-                        <li className={styles.number} key={number}>
-                            <div className={currentPage === number ? styles.crumb__active : styles.crumb} onClick={()=> pagination(number)}>{number}</div>
-                        </li>
-                    ))
-                }
-            </ul>
-        </nav>
+        <ul className={styled.crumbs}>
+          <button id='pag'
+            className="arrow"
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+          >
+            {"<"}
+          </button>
+          {pageNumber.map(number => (
+            <button id='pag'
+              key={number}
+              className={currentPage === number ? styled.crumb__active : styled.crumb}
+              onClick={() => pagination(number)}
+            >
+              {number}
+            </button>
+          ))}
+          <button id='pag'
+            className="arrow"
+            onClick={handleNextPage}
+            disabled={currentPage === pageNumber.length}
+          >
+            {">"}
+          </button>
+        </ul>
+      </nav>
     )
 };

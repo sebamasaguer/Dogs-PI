@@ -3,7 +3,7 @@ import Pagination from "../pagination/pagination";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getDogs } from "../../redux/actions/actions";
-import styles from "./dogs.module.css";
+import styled from "./dogs.module.css";
 
 export default function DogArea() {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export default function DogArea() {
 
   return (
 
-     <div className={styles.dogsArea}>
+     <div className={styled.dogsArea}>
       
         {
           currentDogs.map((el) => { 
@@ -44,7 +44,7 @@ export default function DogArea() {
         )})
         }
  
-        <div className={styles.pagination}>
+        <div className={styled.pagination}>
         <Pagination
           dogsPerPage={dogsPerPage}
           allDogs={allDogs.length}

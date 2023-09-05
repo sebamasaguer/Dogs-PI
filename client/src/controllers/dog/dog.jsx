@@ -23,12 +23,15 @@ export default function DogCard( { id, name, image, temperament, temperaments, h
               
 
               <div className={styles.imageArea}>
+                {image ? (
                 <img
                   className={styles.dogImage}
                   src={image}
-                  alt={`A dog wich is ` + { temperament }}
+                  alt={`A dog wich is ${name}`}
                   height="140px"
-                />
+                />):(
+                  <br />
+                )}
               </div>
             </div>
           </Link>
@@ -56,12 +59,15 @@ export default function DogCard( { id, name, image, temperament, temperaments, h
               {height_min} - {height_min + 10} cm	<br />
              
               <div className={styles.imageArea}>
+              {image ? (
                 <img
                   className={styles.dogImage}
                   src={image}
-                  alt={`A dog`}
+                  alt={`A dog wich is ${name}`}
                   height="140px"
-                />
+                />):(
+                  <br />
+                )}
               </div>
             </div>
           </Link>

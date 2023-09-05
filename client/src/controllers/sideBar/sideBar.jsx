@@ -7,9 +7,12 @@ import {
   orderByName,
   getBreeds,
   getDogsByBreed,
-  orderByWeight
+  orderByWeight,
+  filterCreated
 } from "../../redux/actions/actions";
 import styled from "./sideBar.module.css";
+
+
 
 export default function SideBar() {
   const dispatch = useDispatch();
@@ -26,7 +29,10 @@ export default function SideBar() {
     dispatch(getTemperamentsList());
     dispatch(getBreeds());
   }, [dispatch]);
-
+  
+  function handleFilterCreated(e) {
+    dispatch(filterCreated(e.target.value));
+  }
   function handleClick(e) {
     e.preventDefault();
     dispatch(getDogs());
@@ -119,7 +125,22 @@ export default function SideBar() {
             })}
           </select>
         </div>
-  
+  <div className={styled.imgDog}></div>
+      
+  <div className={styled.filterSection}>
+        <h5 className={styled.filterHeader}>Filter by source</h5>
+        <select
+          onChange={(e) => {
+            handleFilterCreated(e);
+          }}
+        >
+          <option defaultValue value="all">
+            All Sources (Api + BD)
+          </option>
+          <option value="created">BD</option>
+          <option value="inDB">Api </option>
+        </select>
+      </div>
       </div>
 
   );

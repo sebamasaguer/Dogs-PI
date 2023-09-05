@@ -1,6 +1,7 @@
 .side {
     display: flex;
     flex-direction: column;
+    
     background-color: rgba(34, 128, 124, 0.685);
     color: #fff;
     right: 0;
@@ -68,4 +69,17 @@
   
   option {
     line-height: 1.5;
+  }
+
+
+  .imgDog {
+    display: flex;
+
+    width: 10rem;
+    height: 10rem;
+    justify-content: center;
+     align-content: center;
+    margin: 0 auto;
+    background-image: url('../../images/Realistic_dog.gif');
+    background-size: cover;
   }

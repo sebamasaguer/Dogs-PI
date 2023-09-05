@@ -1,7 +1,6 @@
 import styled from "./navBar.module.css";
 import { NavLink } from "react-router-dom";
 import Search from "../search/search";
-import Source from "../source/source";
 
 export default function NavBar() {
   return (
@@ -14,9 +13,7 @@ export default function NavBar() {
           
           </NavLink>
           </div>
-          <div>
-            <Source />
-          </div>
+        
        
         <div className={styled.search}>
           <Search />
@@ -24,12 +21,14 @@ export default function NavBar() {
 
         <div  >
             <NavLink to="/newDog/" className={styled.titlehome1}>
-            Add My Dogui
+           <h1> Add My Dogui</h1>
             </NavLink>
           </div>
           
         <div >
-          <NavLink className={styled.aboutNavButton} to="/about">About</NavLink>
+          <NavLink className={styled.titlehome1} to="/about">
+            <h1>About</h1>
+            </NavLink>
         </div>
 
     </div>    

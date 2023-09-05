@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
  
   background-image: url('../../images/dogs.jpg');
   background-size: cover;
@@ -17,10 +22,9 @@
 .dogs{
     display: flex;
     flex-direction: column;
-
     width: 80%;
     border-radius: 10px;
-    top: 15%;
+
 }
 .sideBar{
 width: 20%;
