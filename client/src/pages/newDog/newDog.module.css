@@ -1,5 +1,4 @@
 .mainContainerCreation {
-  
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,11 +7,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
     box-shadow: 6px 7px 8px -6px rgba(182, 185, 182, 0.911);
     border-radius: 15px;
     color: rgba(228, 223, 223, 0.664);
     box-shadow: 2px 3px 2px 1px rgba(30, 119, 122, 0.562);
+    margin-top: 0.2em;
   }
   .titleDogui{
     font-family: 'Lobster', cursive;
@@ -35,7 +34,7 @@
   }
   form{
       width: 650px;
-      background-color: rgba(177, 177, 177, 0.527);
+      background-color: rgba(16, 94, 5, 0.61);
       border-radius: 15px;
   }
   .button {
@@ -87,15 +86,18 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    background-color: rgba(255, 255, 255, 0.555);
+    background-color: rgba(255, 255, 255, 0.774);
     border-radius: 15px;
     gap: 5px;
     margin: 5px 8px;
     padding: 1px 8px;
+    box-shadow: 6px 7px 8px -6px rgba(69, 69, 69, 0.7);
+    color: black;
   }
-  .selectedItems > button {
+  .selectedItems  button {
       background-color:rgba(255, 0, 0, 0.26);
-      width: 25px;
+      width: 1.5em;
+      
   }
   label {
     
@@ -104,7 +106,7 @@
   input {
     align-items: center;
     border-radius: 5px;
-    background-color: rgba(34, 116, 23, 0.719);
+    background-color: rgba(45, 97, 38, 0.205);
     border: 1px solid rgb(163, 207, 118);
     width:100%;
     line-height: 1.8;
@@ -122,15 +124,21 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: rgba(233, 231, 231, 0.781);
+    border-radius: 5px;
+    color: black;
   }
   
   option {
     line-height: 2;
+ 
+
   }
   .styled_select {
     width: 240px;
     height: 34px;
     overflow: hidden;
     border: 1px solid #ccc;
+ 
   }
   

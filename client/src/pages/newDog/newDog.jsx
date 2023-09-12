@@ -5,55 +5,7 @@ import { postDog, getTemperamentsList } from "../../redux/actions/actions";
 import styles from "./newDog.module.css";
 import validate from "./validate";
 
-/*function validateForm(input) {
-  let errors = {};
 
-  // NAME
-  if (!input.name) {
-    errors.name = "You must type a name";
-  } else {
-    errors.name = "";
-  }
-  if(input.name.lenght < 2 || input.name.lenght > 20){
-    errors.name = 'The name must be between 2 and 20 characters'
-} 
-
-  // WEIGHTS
-  if (!input.weight_min) {
-    // weight min
-    errors.weight_min = "Type a valid minimal weight number";
-  } else if (!/\d{1,2}/gi.test(input.weight_min)) {
-    errors.weight_min = "Weight must have min values. Example: '25'";
-  } else {
-    errors.weight_min = "";
-  }
-  if (!input.weight_max) {
-    // weight max
-    errors.weight_max = "Type a valid maxim weight number";
-  } else if (!/\d{1,2}/gi.test(input.weight_max)) {
-    errors.weight_max = "Weight must have max values. Example: '25'";
-  } else {
-    errors.weight_max = "";
-  }
-  // HEIGHTS
-  if (!input.height_min) {
-    // height min
-    errors.height_min = "Type a valid minimal height number";
-  } else if (!/\d{1,2}/gi.test(input.height_min)) {
-    errors.height_min = "Height must have min values. Example: '25'";
-  } else {
-    errors.height_min = "";
-  }
-  if (!input.height_max) {
-    // height max
-    errors.height_max = "Type a valid maxim height number";
-  } else if (!/\d{1,2}/gi.test(input.height_max)) {
-    errors.height_max = "Height must have max values. Example: '25'";
-  } else {
-    errors.height_max = "";
-  }
-  return errors;
-}*/
 
 export default function DogCreation() {
   const dispatch = useDispatch();
@@ -108,7 +60,6 @@ export default function DogCreation() {
     e.preventDefault();
     if (
       !errors.name &&
-      !errors.image &&
       !errors.weight_min &&
       !errors.height_min &&
       !errors.weight_max &&
@@ -155,17 +106,6 @@ export default function DogCreation() {
               <div>
                 <p className={styles.error}>{errors.name}</p>
               </div>
-            </div>
-            <div className={styles.Section}>
-              <label>Image URL:</label>
-              <input
-                type="url"
-                value={input.image}
-                name="image"
-                placeholder="url"
-                onChange={(e) => handleChange(e)}
-              />
-              
             </div>
             <div className={styles.Section}>
                Heights

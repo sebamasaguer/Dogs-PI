@@ -1,5 +1,12 @@
 import axios from 'axios';
 
+
+
+export const setCurrentPage =(payload)=>{
+    return  {
+        type: 'SET_CURRENT_PAGE',
+                payload}
+}
 export function orderByName(payload) {
     return {
         type: 'ORDER_BY_NAME',
@@ -40,12 +47,18 @@ export function filterDogsByMINWeight(payload) {
 
 export function getDogsByName(name) {
     return async function (dispatch) {
-        const { data } = await axios.get(`http://localhost:3001/dogs?name=${name}`);
+        try {
+ const { data } = await axios.get(`http://localhost:3001/dogs?name=${name}`);
         return dispatch({
             type: "GET_DOGS_BY_NAME",
             payload: data
         });
+        }
+       catch (error) {
+        console.error('Dog not found');
+        alert('Dog not found');
     };
+    }
 }
 
 export function getTemperamentsList() {

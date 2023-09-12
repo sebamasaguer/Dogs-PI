@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./dog.module.css";
-export default function DogCard( { id, name, image, temperament, temperaments, height_min, origin } ) {
+import ImageNoFount from '../../images/images.png';
+export default function DogCard( { id, name, image, temperament, temperaments, weight_min,weight_max } ) {
   if (!temperaments) {
     return (
   
@@ -19,18 +20,17 @@ export default function DogCard( { id, name, image, temperament, temperaments, h
                 )}
               </div>
             
-              {height_min} - {height_min + 10} cm <br /> 
+              {weight_min} - {weight_max} Kg <br /> 
               
 
               <div className={styles.imageArea}>
                 {image ? (
                 <img
                   className={styles.dogImage}
-                  src={image}
-                  alt={`A dog wich is ${name}`}
+                  src={image ? image : "https://i.giphy.com/media/ar8zpFnzWcSbAxjJmd/giphy.webp"}
                   height="140px"
                 />):(
-                  <br />
+                  "https://i.giphy.com/media/ar8zpFnzWcSbAxjJmd/giphy.webp"
                 )}
               </div>
             </div>
@@ -56,17 +56,16 @@ export default function DogCard( { id, name, image, temperament, temperaments, h
                   <br />
                 )}
               </div> 
-              {height_min} - {height_min + 10} cm	<br />
+              {weight_min} - {weight_max} Kg <br /> 
              
               <div className={styles.imageArea}>
               {image ? (
                 <img
                   className={styles.dogImage}
-                  src={image}
-                  alt={`A dog wich is ${name}`}
+                  src={image ? image : "https://i.giphy.com/media/ar8zpFnzWcSbAxjJmd/giphy.webp"}
                   height="140px"
                 />):(
-                  <br />
+                  "https://i.giphy.com/media/ar8zpFnzWcSbAxjJmd/giphy.webp"
                 )}
               </div>
             </div>

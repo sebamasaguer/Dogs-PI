@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getDogsByName } from "../../redux/actions/actions";
+import { getDogsByName, setCurrentPage } from "../../redux/actions/actions";
+
 import styled from "./search.module.css";
 
 export default function SearchBar() {
     const [dogState, setDogsState] = useState("");
+   
     const dispatch = useDispatch();
   
     function handleClick(e) {
@@ -15,6 +17,8 @@ export default function SearchBar() {
       } else {
         dispatch(getDogsByName(dogState));
         setDogsState("");
+        dispatch(setCurrentPage(1));
+
       }
     }
     return (
@@ -26,7 +30,7 @@ export default function SearchBar() {
             value={dogState}
             onChange={(e) => setDogsState(e.target.value)}
           />
-          <button type="submit" onClick={handleClick}>
+          <button type="submit" onClick={handleClick} >
             <span >Search</span>
           </button>
         </div>

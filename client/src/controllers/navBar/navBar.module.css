@@ -9,7 +9,7 @@ background-size: cover;
     background-repeat:repeat;
     background-position: center;
     justify-content: space-between;
-
+    box-shadow: 2px 3px 2px 1px rgba(30, 119, 122, 0.562);
     
 }   
 .titlehome1 {
@@ -29,6 +29,11 @@ margin-top: 20px;
     border: 1px solid #fff;
     box-shadow: 2px 3px 2px 1px rgba(30, 119, 122, 0.562);
 }
+.active{
+    background-image: linear-gradient(90deg, #054b03 0%, #14721c 49%, #054b03 100%);
+    color: #000;
+    text-decoration: none;
+}
 .titlehome1 h1{
 
     margin: 0;
@@ -39,7 +44,7 @@ margin-top: 20px;
     text-decoration: none;
 }
 .titlehome1:hover{
-   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 100%);
+    background-image: linear-gradient(90deg, #076404 0%, #37ee12 49%, #126807 100%);
     color: #000;
     text-decoration: none;
 }

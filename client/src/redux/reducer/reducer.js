@@ -3,7 +3,8 @@ const initialState = {
     allDogs: [],
     temperaments: [],
     breeds: [],
-    details:[]
+    details:[],
+    currentPage: 1
 }
 
 function rootReducer(state = initialState, action) {
@@ -116,6 +117,11 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 details: []
             }
+            case 'SET_CURRENT_PAGE':
+                return {    
+                    ...state,
+                    currentPage: action.payload
+                }
         default:
             return state
     }

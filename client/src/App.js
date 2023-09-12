@@ -21,7 +21,7 @@ function App() {
         <Route path='/dogs/:id' component={Detail} />
         <Route path='/about' component={About} />
         <Route path='/newDog' component={NewDog} />
-       
+        <Route path='*' element={<h1>404</h1>} />
     
         {location.pathname!== '/' && <Footer />}
       </div>

@@ -8,7 +8,8 @@ import {
   getBreeds,
   getDogsByBreed,
   orderByWeight,
-  filterCreated
+  filterCreated,
+  setCurrentPage
 } from "../../redux/actions/actions";
 import styled from "./sideBar.module.css";
 
@@ -32,33 +33,37 @@ export default function SideBar() {
   
   function handleFilterCreated(e) {
     dispatch(filterCreated(e.target.value));
+    dispatch(setCurrentPage(1));
   }
   function handleClick(e) {
-    e.preventDefault();
     dispatch(getDogs());
   }
   
   function handleClickOrder(e) {
     e.preventDefault();
     dispatch(orderByName(e.target.value));
+    dispatch(setCurrentPage(1));
   }
   function handleClickOrderWeight(e) {
     e.preventDefault();
     dispatch(orderByWeight(e.target.value));
+    dispatch(setCurrentPage(1));
   }
   function handleFilteredByTemp(e) {
     e.preventDefault();
     dispatch(filterDogsByTemperament(e.target.value));
+    dispatch(setCurrentPage(1));
   }
   function handleFilteredByBreed(e) {
     e.preventDefault();
     dispatch(getDogsByBreed(e.target.value));
+    dispatch(setCurrentPage(1));
   }
   return (
  
       <div className={styled.side}>
         <div className={styled.sideBarHeader}>
-          <h4 className={styled.header}>Doguis:</h4>
+          <h4 className={styled.header}>Doguis Filter</h4> <br/>
           <div
             className={styled.tooltip}
             onClick={(e) => {
