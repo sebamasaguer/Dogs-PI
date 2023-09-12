@@ -11,7 +11,7 @@ const getApiInfoDog = async () => {
         return { 
             id: e.id,
             name: e.name,
-            image: URLImage + e.reference_image_id +'.jpg',
+            image: URLImage + e.reference_image_id + '.jpg' ,
             breed_group: e.breed_group,
             temperament: e.temperament,
             life_span: e.life_span,
