@@ -36,7 +36,13 @@ module.exports = (sequelize) => {
     },
     origin:{
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      defaultValue: 'Unknown'
+    },
+    breed_group: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'Unknown'
     },
     image:{
       type: DataTypes.STRING,
