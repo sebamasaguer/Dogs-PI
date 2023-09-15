@@ -16,7 +16,8 @@ export default function DogCreation() {
       else return 1;
     }
   );;
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({}
+);
 
   const [input, setInput] = useState({
     name: "",
@@ -26,6 +27,7 @@ export default function DogCreation() {
     weight_min: "",
     weight_max: "",
     life_span: "",
+    origin:"",
     temperament: [],
   });
 
@@ -172,6 +174,16 @@ export default function DogCreation() {
               <div>
               <p className={styles.error}>{errors.life_span}</p>
                </div>
+            </div>
+               <div className={styles.Section}>
+              <label>Origin</label>
+              <input
+                type="text"
+                value={input.origin}
+                name="origin"
+                placeholder="Years"
+                onChange={(e) => handleChange(e)}
+              />
 
             </div>
             <div className={styles.Section}>
@@ -199,8 +211,12 @@ export default function DogCreation() {
               <Link to="/home">
                 <button className={styles.buttonCancel}>Cancel</button>
               </Link>
-              <button className={styles.button} type="submit">
-                Create
+              <button className={styles.button} type="submit" disabled={
+                input.name === "" ||
+                input.weight_min === "" ||
+                input.weight_max === "" ||
+                input.height_min === "" }>
+               Create
               </button>
             </div>
           </form>

@@ -88,7 +88,7 @@ export function getDogsByBreed(payload) {
                 payload: json.data
             })
         } catch (error) {
-            console.log(error, "Error on the filters in actions file")
+            console.log(error, "Error on the filters")
         }
     }
 }
@@ -112,7 +112,7 @@ export function filterDogsByTemperament(payload) {
                 payload: json.data
             })
         } catch (error) {
-            console.log(error, "Error on the filters in actions file")
+            console.log(error, "Error on the filters")
         }
     }
 }

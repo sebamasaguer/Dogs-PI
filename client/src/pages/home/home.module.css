@@ -6,24 +6,16 @@
     align-items: center;
     height: 100vh;
     width: 100%;
-margin-top: 0.2em;
- 
-  background-image: url('../../images/dogs.jpg');
+ margin-top: 0.2em;
   background-size: cover;
-}
-.nav{
-    background-color: #1a1a1a;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    padding: 0 5px;
- 
+  background-color: rgba(235, 209, 177, 0.74);
 }
 .dogs{
     display: flex;
     flex-direction: column;
     width: 80%;
     border-radius: 10px;
+    background-size: cover;
 
 }
 .sideBar{

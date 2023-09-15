@@ -1,8 +1,8 @@
 .dogCard {
-    margin: 10px 5px 10px 5px;
-      padding: 5px;
+    margin: 8px 3px 8px 3px;
+      padding: 3px;
       width: 280px;
-      height: 320px;
+      height: 300px;
       border-radius: 12px;
       box-shadow: 6px 7px 8px -6px rgba(69,69,69,0.7);
       position: relative;
@@ -20,7 +20,7 @@
    
     }
     .titleArea {
-      font-size: 20px;
+      font-size: 16px;
       position: absolute;
       min-height: 40px;
     }
@@ -31,7 +31,7 @@
     }
     
     .infoArea {
-      font-size: 20px;
+      font-size: 14px;
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;

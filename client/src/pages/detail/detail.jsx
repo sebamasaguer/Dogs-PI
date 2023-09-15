@@ -40,8 +40,6 @@ export default function DogDetail(props) {
                 </div>
               </div>
               <div className={styled.weights}>
-                <div className={styled.imageSection}>
-                </div>
                 <div className={styled.infoSection}>
                   <h3>Weight: </h3>
                   Min: {myDog.weight_min}<br />
@@ -49,7 +47,6 @@ export default function DogDetail(props) {
                 </div>
               </div>
               <div className={styled.heights}>
-               
                 <div className={styled.infoSection}>
                   <h3>Height: </h3>
                   Min: {myDog.height_min}<br />

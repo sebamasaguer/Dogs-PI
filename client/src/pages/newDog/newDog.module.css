@@ -34,7 +34,7 @@
   }
   form{
       width: 650px;
-      background-color: rgba(16, 94, 5, 0.61);
+      background-color: rgba(15, 94, 5, 0.349);
       border-radius: 15px;
   }
   .button {
@@ -112,10 +112,10 @@
     line-height: 1.8;
   }
   input::placeholder {
-    color: rgb(163, 207, 118);
+    color: rgba(163, 207, 118, 0.425);
   }
   .error {
-    font-size: 10px;
+    font-size: 15px;
     color: red;
   }
   .buttonSection {
@@ -139,6 +139,10 @@
     height: 34px;
     overflow: hidden;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(45, 97, 38, 0.205);
+    
+
  
   }
   
