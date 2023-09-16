@@ -65,7 +65,7 @@ function rootReducer(state = initialState, action) {
                 })
             return {
                 ...state,
-                dogs: sortedArr
+                allDogs: sortedArr
             }
         case 'ORDER_BY_WEIGHT':
             const sortedWeight = action.payload === 'asc' ?
